@@ -33,7 +33,7 @@ func lengthOfLongestSubstringApproach1(s string) int {
 
 func lengthOfLongestSubstringApproach2(s string) int {
 
-	// maintain a has map for visited chars
+	// maintain a hash map for visited chars
 	var i int
 	visited := make(map[string]int)
 	sos := 0
