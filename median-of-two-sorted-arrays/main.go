@@ -2,8 +2,6 @@
 
 package main
 
-import "fmt"
-
 func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 
 	lenNums1 := len(nums1)
@@ -33,7 +31,6 @@ func findMedianSortedArrays(nums1 []int, nums2 []int) float64 {
 		}
 
 		if nums1[i] < nums2[j] {
-			fmt.Println(3)
 			nums3 = append(nums3, nums1[i])
 			i++
 		} else if nums1[i] > nums2[j] {
