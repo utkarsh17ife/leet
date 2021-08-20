@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/maximum-subarray/
+// kadanes algo
 
 package main
 
