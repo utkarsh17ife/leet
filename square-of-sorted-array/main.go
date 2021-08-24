@@ -10,7 +10,7 @@ func squareOfSortedArray(nums []int) []int {
 	a := 0
 	b := len(nums) - 1
 	c := len(nums) - 1
-	// result numsay
+	// result nums
 	resNums := make([]int, len(nums))
 
 	// start loop from start and end
