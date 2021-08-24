@@ -1,42 +1,44 @@
+// https://leetcode.com/problems/squares-of-a-sorted-array/
+
 package main
 
 import "fmt"
 
-func squareOfSortedArray(arr []int) []int {
+func squareOfSortedArray(nums []int) []int {
 
 	// init vales, set start and end pointers to 0 and len-1 resp.
 	a := 0
-	b := len(arr) - 1
-	c := len(arr) - 1
-	// result array
-	resArr := make([]int, len(arr))
+	b := len(nums) - 1
+	c := len(nums) - 1
+	// result numsay
+	resNums := make([]int, len(nums))
 
 	// start loop from start and end
-	for a < len(arr)-1 || b > -1 {
+	for a < len(nums)-1 || b > -1 {
 
 		// end loop
 		if a > b {
 			break
 		}
 
-		// compare the oppsite end values, based on bigger square value, push in result array from end
-		if arr[a]*arr[a] > arr[b]*arr[b] {
-			resArr[c] = arr[a] * arr[a]
+		// compare the oppsite end values, based on bigger square value, push in result numsay from end
+		if nums[a]*nums[a] > nums[b]*nums[b] {
+			resNums[c] = nums[a] * nums[a]
 			a++
 		} else {
-			resArr[c] = arr[b] * arr[b]
+			resNums[c] = nums[b] * nums[b]
 			b--
 		}
 		c--
 
 	}
 
-	return resArr
+	return resNums
 }
 
 func main() {
 
-	arr := []int{-7, -5, -3, -2, -1, 0, 1, 20}
+	arr := []int{-7, -3, 2, 3, 11}
 	arr = squareOfSortedArray(arr)
 	fmt.Println(arr)
 
